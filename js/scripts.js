@@ -11,6 +11,34 @@ $(document).ready(function() {
     $("#output").text(result);
   });
 });
+
+//whether triangle sides are equal or not
+var triangleTracker = function(One, two, three){
+  if (one + two <= three || one + three <= two || two + three <= one ){
+    var triangle = "not a triangle";
+  } else If (One === two && one == three){
+      var triangle = "equilateral";
+  } else if (One === two || one === three || two === three){
+      var triangle = "isoleses";
+  }  else if (One != two && one != three  && two != three){
+      var triangle = "scalene";
+  } 
+  return triangle;
+};
+
+var sideOne = parseInt($("#firstInput").val());
+var secondSide = parseInt($("#secondInput").val());
+var lastSide = parseInt($("#thirdInput").val());
+
+result = triangleTracker(sideOne, secondSide, lastSide)
+
+
+
+
+
+
+
+
 /*$(document).ready(function() {
   $("form#insurance").submit(function(event) {
     event.preventDefault();
