@@ -15,7 +15,7 @@
 
 //whether triangle sides are equal or not
 
-var one = 20;
+/*var one = 20;
 var two = 30;
 var three = 25;
 var triangleTracker = function(one, two, three){
@@ -35,11 +35,12 @@ var triangleTracker = function(one, two, three){
   return triangle;
 };
 var result = triangleTracker(one, two, three);
+alert (result);
 var sideOne = parseInt($("#firstInput").val());
 var secondSide = parseInt($("#secondInput").val());
 var lastSide = parseInt($("#thirdInput").val());
 
-result = triangleTracker(sideOne, secondSide, lastSide)
+result = triangleTracker(sideOne, secondSide, lastSide)*/
 
 
 
@@ -48,7 +49,7 @@ result = triangleTracker(sideOne, secondSide, lastSide)
 
 
 
-/*$(document).ready(function() {
+$(document).ready(function() {
   $("form#insurance").submit(function(event) {
     event.preventDefault();
     var age = parseInt($("input#age").val());
@@ -66,7 +67,7 @@ result = triangleTracker(sideOne, secondSide, lastSide)
     }
     
   });
-});*/
+});
 
 /*
 // This is for the appointment booking form.
