@@ -1,18 +1,17 @@
-/*$(document).ready(function() {
-  $("form#insurance").submit(function(event) {
-    
-    var age = parseInt($("input#age").val());
-    var gender = $("select#gender").val();
-
-    var quote = (100 - age) * 3;
-
-    $("#rate").empty().append(quote);
-    $("#quote").show();
-    event.preventDefault();
-  });
-});*/
-
 $(document).ready(function() {
+  $("form#calculator").submit(function() {
+    event.preventDefault();
+    var number1 = parseInt($("#input1").val());
+    var number2 = parseInt($("#input2").val());
+    var operator = $("input:radio[name=operator]:checked").val();
+    console.log("1st number: " + number1);  // for debugging
+    console.log("2nd number: " + number2);  // for debugging
+    console.log("operator: " + operator);  // for debugging
+    var result = add(number1, number2);
+    $("#output").text(result);
+  });
+});
+/*$(document).ready(function() {
   $("form#insurance").submit(function(event) {
     event.preventDefault();
     var age = parseInt($("input#age").val());
@@ -30,7 +29,7 @@ $(document).ready(function() {
     }
     
   });
-});
+});*/
 
 /*
 // This is for the appointment booking form.
