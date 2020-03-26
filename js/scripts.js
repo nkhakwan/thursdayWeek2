@@ -1,4 +1,4 @@
-$(document).ready(function() {
+/*$(document).ready(function() {
   $("form#calculator").submit(function() {
     event.preventDefault();
     var number1 = parseInt($("#input1").val());
@@ -10,22 +10,27 @@ $(document).ready(function() {
     var result = add(number1, number2);
     $("#output").text(result);
   });
-});
+});*/
+
 
 //whether triangle sides are equal or not
-var triangleTracker = function(One, two, three){
+
+var one = 20;
+var two = 30;
+var three = 25;
+var triangleTracker = function(one, two, three){
   if (one + two <= three || one + three <= two || two + three <= one ){
     var triangle = "not a triangle";
-  } else If (One === two && one == three){
-      var triangle = "equilateral";
-  } else if (One === two || one === three || two === three){
-      var triangle = "isoleses";
-  }  else if (One != two && one != three  && two != three){
-      var triangle = "scalene";
+  } else If (one === two && one === three){
+       triangle = "equilateral";
+  } else if (one === two || one === three || two === three){
+       triangle = "isoleses";
+  }  else if (one != two && one != three  && two != three){
+       triangle = "scalene";
   } 
   return triangle;
 };
-
+result = triangleTracker(one, two, three);
 var sideOne = parseInt($("#firstInput").val());
 var secondSide = parseInt($("#secondInput").val());
 var lastSide = parseInt($("#thirdInput").val());
