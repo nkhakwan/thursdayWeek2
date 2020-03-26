@@ -21,16 +21,20 @@ var three = 25;
 var triangleTracker = function(one, two, three){
   if (one + two <= three || one + three <= two || two + three <= one ){
     var triangle = "not a triangle";
-  } else If (one === two && one === three){
+    alert(triangle);
+  } else if (one === two && one === three){
        triangle = "equilateral";
+       alert(triangle);
   } else if (one === two || one === three || two === three){
        triangle = "isoleses";
+       alert(triangle);
   }  else if (one != two && one != three  && two != three){
        triangle = "scalene";
+       alert(triangle);
   } 
   return triangle;
 };
-result = triangleTracker(one, two, three);
+var result = triangleTracker(one, two, three);
 var sideOne = parseInt($("#firstInput").val());
 var secondSide = parseInt($("#secondInput").val());
 var lastSide = parseInt($("#thirdInput").val());
