@@ -1,3 +1,38 @@
+/*$(document).ready(function() {
+  $("form#insurance").submit(function(event) {
+    
+    var age = parseInt($("input#age").val());
+    var gender = $("select#gender").val();
+
+    var quote = (100 - age) * 3;
+
+    $("#rate").empty().append(quote);
+    $("#quote").show();
+    event.preventDefault();
+  });
+});*/
+
+$(document).ready(function() {
+  $("form#insurance").submit(function(event) {
+    event.preventDefault();
+    var age = parseInt($("input#age").val());
+    var gender = $("select#gender").val();
+
+    if (age) {
+      var quote = (100 - age) * 3;
+      if (gender === 'male' && age < 26) {
+        quote += 50;
+      }
+      $("#rate").empty().append(quote);
+      $("#quote").show();
+    } else {
+      alert('Please enter your age.');
+    }
+    
+  });
+});
+
+/*
 // This is for the appointment booking form.
 $(document).ready(function() {
   $("form#booking").submit(function(event){
@@ -8,7 +43,7 @@ $(document).ready(function() {
     var result = "you are booked"
   $("#output").text(result);
   });
-});
+});*/
 
 
 
@@ -18,7 +53,7 @@ $(document).ready(function() {
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
-
+/*
 //Back end code
 var add = function(number1, number2) {
   return number1 + number2;
@@ -57,7 +92,7 @@ $(document).ready(function() {
     }
   $("#output").text(result);
   });
-});
+});*/
 
 
 
